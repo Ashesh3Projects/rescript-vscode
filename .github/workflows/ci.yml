@@ -32,8 +32,7 @@ jobs:
         cpu: ${{ matrix.cpu }}
         cpu_info: ${{ matrix.cpu_info }}
         commands: |
-            test `uname -m` = ${{ matrix.arch }}
-            grep Model /proc/cpuinfo
+            echo uname -m
             
     - name: Cache OCaml's opam
       uses: actions/cache@v2.1.5
